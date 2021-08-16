@@ -1,17 +1,17 @@
-import time
+import time # importing libraries
 import pandas as pd
 import numpy as np
 
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+              'washington': 'washington.csv' } # Adding Cities
 
 MONTH_DATA = ['all','january', 'february', 'march', 'april', 'may', 'june']
 
 DAY_DATA = ['all', 'monday', 'tuesday', 'wednesday', 'friday', 'saturday', 'sunday']
 
 def get_filters():
-    
+
     """
     Asks user to specify a city, month, and day to analyze.
     Returns:
@@ -19,11 +19,11 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    
+
     print('Hello! Let\'s explore some US bikeshare data!')
-    
+
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    
+
     CITY = ''
     while CITY.lower() not in CITY_DATA:
         CITY = input("\n Enter the name of the city to analyze data?\n (E.g. chicago or new york city or washington)\n Your input is not case sensitive (chicago/CHICAGO/Chicago)\n ")
@@ -33,7 +33,7 @@ def get_filters():
             print("Please check your input and enter either chicago, new york city or washington.\n")
 
     # TO DO: get user input for month (all, january, february, ... , june)
-    
+
     MONTH = ''
     while MONTH.lower() not in MONTH_DATA:
         MONTH = input("\n Enter the month, between january to june for which you want to analyze the data \n Your input should be complete month name and is not case sensitive\n You can enter in any format june/June/JUNE\n If you want to analyze all the months just enter all/ALL/All\n")
@@ -43,7 +43,7 @@ def get_filters():
             print(" Please input the month name in full or just enter all \n")
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    
+
     DAY = ''
     while DAY.lower() not in DAY_DATA:
         DAY = input("\n Enter the day of the week, between Monday to Sunday for which you want to analyze the data \n Your input should be complete day name and is not case sensitive\n You can enter in any format Sunday/SUNDAY/sunday\n If you want to analyze all the days just enter all/ALL/All\n")
@@ -88,7 +88,7 @@ def time_stats(df):
     start_time = time.time()
 
     # TO DO: display the most common month
-    
+
     common_month = df['month'].mode()[0]
     print("The most common month is: " + MONTH_DATA[common_month].title())
 
@@ -171,7 +171,7 @@ def user_stats(df, city):
     print("The count of user types is: \n" + str(user_types))
 
     if city == 'chicago.csv' or city == 'new_york_city.csv':
-        
+
         # TO DO: Display counts of gender
         gender = df['Gender'].value_counts()
         print("\nThe count of user gender is: \n" + str(gender))
@@ -218,6 +218,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-            
+
 if __name__ == "__main__":
     main()
