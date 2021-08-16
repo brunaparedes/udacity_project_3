@@ -1,7 +1,7 @@
 >**Note**: Please **fork** the current Udacity repository so that you will have a **remote** repository in **your** Github account. Clone the remote repository to your local machine. Later, as a part of the project "Post your Work on Github", you will push your proposed changes to the remote repository in your Github account.
 
 ### Date created
-14 August 2021 (10.34 AM EST).
+14 August 2021 (10.34 AM EST) Initial creation. 16 August 2021 (1.55 AM EST) Modified.
 
 ### Project Title
 Bike Share Data Project
@@ -69,4 +69,4 @@ new_york_city
 washington
 
 ### Credits
-I would like to thank Udacity Course Instructors, Mentors, and Reviewers 
+I would like to thank Udacity Course Instructors, Mentors, and Reviewers.  
