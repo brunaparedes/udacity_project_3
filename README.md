@@ -3,6 +3,9 @@
 ### Date created
 14 August 2021 (10.34 AM EST) Initial creation. 16 August 2021 (1.55 AM EST) Modified.
 
+### Authors
+Bruna Paredes
+
 ### Project Title
 Bike Share Data Project
 
